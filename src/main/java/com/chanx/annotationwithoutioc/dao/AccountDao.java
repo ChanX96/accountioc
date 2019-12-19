@@ -1,6 +1,6 @@
-package com.chanx.accountioc.dao;
+package com.chanx.annotationwithoutioc.dao;
 
-import com.chanx.accountioc.domain.Account;
+import com.chanx.annotationwithoutioc.domain.Account;
 
 import java.util.List;
 

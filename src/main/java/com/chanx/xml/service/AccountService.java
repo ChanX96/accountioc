@@ -1,6 +1,6 @@
-package com.chanx.accountioc.service;
+package com.chanx.xml.service;
 
-import com.chanx.accountioc.domain.Account;
+import com.chanx.xml.domain.Account;
 
 import java.util.List;
 

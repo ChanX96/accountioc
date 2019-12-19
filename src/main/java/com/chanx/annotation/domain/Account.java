@@ -1,4 +1,4 @@
-package com.chanx.accountioc.domain;
+package com.chanx.annotation.domain;
 
 import java.io.Serializable;
 
