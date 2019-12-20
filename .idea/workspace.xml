@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d455e2a-c95f-4416-968d-c892647b562c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/config/SpringConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/config/JdbcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbcConfig.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/record.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/accountioc/dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotation/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/accountioc/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotation/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/accountioc/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotation/domain/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/accountioc/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotation/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/accountioc/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/annotation/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/config/SpringConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/config/SpringConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/chanx/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chanx/test/AccountServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +50,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/chanx/annotationwithoutioc" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -69,7 +61,7 @@
       <recent name="D:\code\jweb\accountioc\src\main\java\com\chanx\annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountServiceTest.testFindAll">
+  <component name="RunManager" selected="JUnit.AccountServiceTest.testFindOne">
     <configuration name="AccountServiceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="accountioc" />
       <extension name="coverage">
@@ -152,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
         <item itemvalue="JUnit.AccountServiceTest.testFindOne" />
+        <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
         <item itemvalue="JUnit.AccountServiceTest.testDelete" />
         <item itemvalue="JUnit.AccountServiceTest.testUpdate" />
         <item itemvalue="JUnit.AccountServiceTest.testSave" />
@@ -225,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576731606319</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring小练习">
+      <created>1576737091893</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576737091893</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -237,14 +236,18 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="178" width="816" height="731" key="#Intentions/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576646737457" />
+    <state x="2472" y="179" key="#Project_Structure" timestamp="1576821493274">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="179" key="#Project_Structure/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576821493274" />
     <state x="2685" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1576592211082">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576592211082" />
-    <state x="2518" y="112" key="CommitChangelistDialog2" timestamp="1576731605735">
+    <state x="2518" y="112" key="CommitChangelistDialog2" timestamp="1576737091033">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2518" y="112" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576731605735" />
+    <state x="2518" y="112" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737091033" />
     <state x="2660" y="261" key="FileChooserDialogImpl" timestamp="1576647072428">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -257,22 +260,22 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2702" y="221" key="Github.UntrackedFilesDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576590008090" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1576737055711">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1576823296733">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737055711" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1576737055710">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576823296733" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1576823296733">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737055710" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1576737055710">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576823296733" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1576823296733">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737055710" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1576737055710">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576823296733" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1576823296733">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737055710" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576823296733" />
     <state x="2460" y="254" key="IDE.errors.dialog" timestamp="1576590500072">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -281,17 +284,17 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576647541610" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1576731608067">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1576737093362">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576731608067" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576737093362" />
     <state x="2296" y="211" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1576647073461">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2296" y="211" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576647073461" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1576735737743">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1576823074776">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576735737743" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576823074776" />
   </component>
 </project>

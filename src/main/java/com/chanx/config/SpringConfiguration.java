@@ -2,9 +2,7 @@ package com.chanx.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.commons.dbutils.QueryRunner;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
@@ -12,6 +10,7 @@ import java.beans.PropertyVetoException;
 /**
  *  新注解：
  *      @Configuration：指定当前类是一个配置类。
+ *          细节：当配置类作为AnnotationConfigApplicationContext对象创建的参数时，该注解可以不写。
  *      @ComponentsScan：用于通过注解指定spring在创建容器时要扫描的包。
  *          属性：value和basePackages作用相同，指定创建容器时要扫描的包。使用此注解等同于在xml中配置了
  *               <context:component-scan base-package="com.chanx.annotation"></context:component-scan>
@@ -19,30 +18,15 @@ import java.beans.PropertyVetoException;
  *          属性：name用于指定bean的id。默认值为当前方法名称。
  *          细节：当使用注解配置方法时，如果方法有参数，spring框架回去容器中查找有没有可用的bean对象。
  *          查找的方式和@Autowired相同。
+ *      @Import：用于导入其他的配置类
+ *          属性：value，用于指定其他的配置类字节码。当我们使用Import注解之后，有Import注解的类就是父配置类，而导入的都是子配置类
+ *      @PropertySource：用于指定properties文件的位置。
+ *          属性：value，指定文件名称和路径。关键字classpath，表示类路径下
  */
 // 配置类，作用和bean.xml相同
-@Configuration
 @ComponentScan("com.chanx.annotationwithoutioc")
+@Import(JdbcConfig.class)
+@PropertySource("classpath:jdbcConfig.properties")
 public class SpringConfiguration {
 
-    @Bean(name = "runner")
-    public QueryRunner createQueryRunner(DataSource dataSource) {
-
-        return new QueryRunner(dataSource);
-    }
-
-    @Bean(name = "dataSource")
-    public DataSource createDataSource() {
-
-        try {
-            ComboPooledDataSource ds = new ComboPooledDataSource();
-            ds.setDriverClass("com.mysql.jdbc.Driver");
-            ds.setJdbcUrl("jdbc:mysql://localhost:3306/test?serverTimezone=UTC");
-            ds.setUser("root");
-            ds.setPassword("123");
-            return ds;
-        } catch (PropertyVetoException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
