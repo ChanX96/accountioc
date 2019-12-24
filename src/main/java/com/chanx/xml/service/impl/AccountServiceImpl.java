@@ -7,6 +7,10 @@ import com.chanx.xml.service.AccountService;
 import java.util.List;
 
 // 账户业务层实现类
+
+/**
+ * 事务控制在业务层。
+ */
 public class AccountServiceImpl implements AccountService {
 
     private AccountDao accountDao;
@@ -33,5 +37,21 @@ public class AccountServiceImpl implements AccountService {
 
     public void deleteAccount(Integer id) {
         accountDao.deleteAccount(id);
+    }
+
+    public void transfer(String sourceName, String targetName, Float money) {
+
+        // 1. 根据名称查询转出账户
+        Account source = accountDao.findAccountByName(sourceName);
+        // 2. 根据名称查询转入账户
+        Account target = accountDao.findAccountByName(targetName);
+        // 3. 转出账户减钱
+        source.setMoney(source.getMoney() - money);
+        // 4. 转入账户价钱
+        target.setMoney(target.getMoney() + money);
+        // 5. 更新转出账户
+        accountDao.updateAccount(source);
+        // 6. 更新转入账户
+        accountDao.updateAccount(target);
     }
 }

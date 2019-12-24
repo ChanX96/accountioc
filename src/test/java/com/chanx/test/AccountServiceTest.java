@@ -1,11 +1,15 @@
 package com.chanx.test;
 
-import com.chanx.annotationwithoutioc.domain.Account;
-import com.chanx.annotationwithoutioc.service.AccountService;
+
 import com.chanx.config.SpringConfiguration;
+import com.chanx.xml.domain.Account;
+import com.chanx.xml.service.AccountService;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -23,23 +27,23 @@ import java.util.List;
  *  当使用spring 5.X版本时，要求junit的jar必须是4.1.2及以上。
 */
 // 使用junit单元测试
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringConfiguration.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = SpringConfiguration.class)
 public class AccountServiceTest {
 
 //    private ApplicationContext ac;
-    @Autowired
+//    @Autowired
     private AccountService as;
 
-//    @Before
-//    public void init() {
-//
-//        // 1.获取对象
-////        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml.old");
+    @Before
+    public void init() {
+
+        // 1.获取对象
+        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
 //        ac = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-//        // 2.获得业务层对象
-//        as = ac.getBean("accountService", AccountService.class);
-//    }
+        // 2.获得业务层对象
+        as = ac.getBean("accountService", AccountService.class);
+    }
 
     @Test
     public void testFindAll() {
@@ -86,5 +90,11 @@ public class AccountServiceTest {
 
         // 3.执行方法
         as.deleteAccount(4);
+    }
+
+    @Test
+    public void testTransfer() {
+
+        as.transfer("aaa", "bbb", 100F);
     }
 }
