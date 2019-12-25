@@ -21,12 +21,26 @@ public class ConnectionUtils {
      */
     public Connection getThreadConnection() {
 
-        // 1. 先从ThreadLocal上获取
-        Connection conn = tl.get();
-        // 2. 判断当前线程上是否有连接
-        if(conn == null) {
-            // 3. 从数据源中获取连接，并且和线程绑定
-            conn = dataSource.getConnection();
+        try {
+            // 1. 先从ThreadLocal上获取
+            Connection conn = tl.get();
+            // 2. 判断当前线程上是否有连接
+            if(conn == null) {
+                // 3. 从数据源中获取连接，并且和线程绑定
+                conn = dataSource.getConnection();
+                tl.set(conn);
+            }
+            // 4. 返回当前线程上的连接
+            return conn;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * 把连接和线程解绑
+     */
+    public void removeConnection() {
+        tl.remove();
     }
 }
