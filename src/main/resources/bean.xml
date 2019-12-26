@@ -12,7 +12,7 @@
 <!--        https://www.springframework.org/schema/beans/spring-beans.xsd">-->
 
 <!--    配置Service对象-->
-    <bean id="accountService" class="com.chanx.xml.service.impl.AccountServiceImpl">
+    <bean id="accountService" class="com.chanx.xml.service.impl.AccountServiceImpl_OLD">
 <!--        注入Dao对象-->
         <property name="accountDao" ref="accountDao"></property>
 <!--        注入事务管理器-->
