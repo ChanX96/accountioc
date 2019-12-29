@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -27,23 +28,24 @@ import java.util.List;
  *  当使用spring 5.X版本时，要求junit的jar必须是4.1.2及以上。
 */
 // 使用junit单元测试
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = SpringConfiguration.class)
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:bean.xml")
 public class AccountServiceTest {
 
 //    private ApplicationContext ac;
-//    @Autowired
+    @Autowired
+    @Qualifier("proxyAccountService")
     private AccountService as;
 
-    @Before
-    public void init() {
-
-        // 1.获取对象
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-//        ac = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-        // 2.获得业务层对象
-        as = ac.getBean("accountService", AccountService.class);
-    }
+//    @Before
+//    public void init() {
+//
+//        // 1.获取对象
+//        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
+////        ac = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+//        // 2.获得业务层对象
+//        as = ac.getBean("accountService", AccountService.class);
+//    }
 
     @Test
     public void testFindAll() {

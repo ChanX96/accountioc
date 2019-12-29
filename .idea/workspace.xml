@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d455e2a-c95f-4416-968d-c892647b562c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/service/impl/AccountServiceImpl_OLD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/factory/BeanFactiory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/xml/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chanx/xml/utils/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chanx/xml/utils/TransactionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chanx/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chanx/test/AccountServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577347307410</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="spring小练习">
+      <created>1577369611102</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577369611102</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -278,14 +287,14 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577254003321" />
-    <state x="2560" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577252728266">
+    <state x="2560" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577598541320">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2560" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577252728266" />
-    <state x="2518" y="112" key="CommitChangelistDialog2" timestamp="1577347306887">
+    <state x="2560" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577598541320" />
+    <state x="2518" y="112" key="CommitChangelistDialog2" timestamp="1577369610329">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2518" y="112" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577347306887" />
+    <state x="2518" y="112" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577369610329" />
     <state x="2660" y="261" key="FileChooserDialogImpl" timestamp="1576647072428">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -298,22 +307,22 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2702" y="221" key="Github.UntrackedFilesDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576590008090" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1577368221543">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1577599651739">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577368221543" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1577368221543">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577599651739" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1577599651739">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577368221543" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1577368221543">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577599651739" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1577599651739">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577368221543" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1577368221543">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577599651739" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1577599651739">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577368221543" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577599651739" />
     <state x="2460" y="254" key="IDE.errors.dialog" timestamp="1576590500072">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -322,10 +331,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576647541610" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577347309628">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577369612662">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577347309628" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577369612662" />
     <state x="2296" y="211" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1576647073461">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

@@ -15,11 +15,6 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
 
     private AccountDao accountDao;
-    private TransactionManager txManager;
-
-    public void setTxManager(TransactionManager txManager) {
-        this.txManager = txManager;
-    }
 
     public void setAccountDao(AccountDao accountDao) {
         this.accountDao = accountDao;

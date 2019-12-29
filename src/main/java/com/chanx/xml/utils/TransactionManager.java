@@ -9,7 +9,7 @@ public class TransactionManager {
 
     private ConnectionUtils connectionUtils;
 
-    public void setConnectionUtils(ConnectionUtils connectionUtils) {
+    public void setConnectionUtils(ConnectionUtils connectionUtils) throws SQLException {
         this.connectionUtils = connectionUtils;
     }
 
