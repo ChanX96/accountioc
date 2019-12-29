@@ -16,11 +16,11 @@ public class BeanFactiory {
     private AccountService accountService;
     private TransactionManager txManager;
 
-    public void setTxManager(TransactionManager txManager) {
+    public final void setTxManager(TransactionManager txManager) {
         this.txManager = txManager;
     }
 
-    public final void setAccountService(AccountService accountService) {
+    public void setAccountService(AccountService accountService) {
         this.accountService = accountService;
     }
 

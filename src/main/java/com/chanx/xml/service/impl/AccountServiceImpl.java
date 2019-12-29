@@ -27,7 +27,7 @@ public class AccountServiceImpl implements AccountService {
 
     public Account findAccountById(Integer id) {
 
-        return findAccountById(id);
+        return accountDao.findAccountById(id);
     }
 
     public void saveAccount(Account account) {

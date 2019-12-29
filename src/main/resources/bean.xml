@@ -22,11 +22,9 @@
         <property name="txManager" ref="txManager"></property>
     </bean>
 <!--    配置Service对象-->
-    <bean id="accountService" class="com.chanx.xml.service.impl.AccountServiceImpl_OLD">
+    <bean id="accountService" class="com.chanx.xml.service.impl.AccountServiceImpl">
 <!--        注入Dao对象-->
         <property name="accountDao" ref="accountDao"></property>
-<!--        注入事务管理器-->
-        <property name="txManager" ref="txManager"></property>
     </bean>
 
 <!--    配置Dao对象-->
